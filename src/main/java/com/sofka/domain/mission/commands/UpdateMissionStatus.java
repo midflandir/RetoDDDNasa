@@ -5,15 +5,12 @@ import com.sofka.domain.mission.values.MissionID;
 import com.sofka.domain.mission.values.MissionName;
 import com.sofka.domain.mission.values.MissionStatus;
 
-public class CreateMission extends Command {
+public class UpdateMissionStatus extends Command {
     private final MissionID missionID;
-    private final MissionName missionName;
-
     private final MissionStatus missionStatus;
 
-    public CreateMission(MissionName missionName, MissionStatus missionStatus) {
-        this.missionID = new MissionID();
-        this.missionName = missionName;
+    public UpdateMissionStatus(MissionID missionID, MissionStatus missionStatus) {
+        this.missionID = missionID;
         this.missionStatus = missionStatus;
     }
 
@@ -21,10 +18,7 @@ public class CreateMission extends Command {
         return missionID;
     }
 
-    public MissionName getMissionName() {
-        return missionName;
-    }
-    public MissionStatus getMissionStatus() {
+    public MissionStatus MissionStatus() {
         return missionStatus;
     }
 }

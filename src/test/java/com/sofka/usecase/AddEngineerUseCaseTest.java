@@ -11,6 +11,7 @@ import com.sofka.domain.mission.values.EngineerID;
 import com.sofka.domain.mission.values.EngineerName;
 import com.sofka.domain.mission.values.MissionID;
 import com.sofka.domain.mission.values.MissionName;
+import com.sofka.domain.mission.values.MissionStatus;
 import com.sofka.domain.mission.values.Salary;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -34,7 +35,7 @@ class AddEngineerUseCaseTest {
     void AddEngineerUseCaseTest(){
 
 
-        MissionCreated event = new MissionCreated(new MissionName("Curiosity"));
+        MissionCreated event = new MissionCreated(new MissionName("Curiosity"), new MissionStatus("Pending"));
         event.setAggregateRootId(ROOT_ID);
 
         AddEngineer command = new AddEngineer(new MissionID(event.aggregateRootId()),

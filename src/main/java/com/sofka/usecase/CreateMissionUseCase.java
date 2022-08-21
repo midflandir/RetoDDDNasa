@@ -12,7 +12,8 @@ public class CreateMissionUseCase extends UseCase<RequestCommand<CreateMission>,
         CreateMission command = createMissionRequestCommand.getCommand();
         Mission mission = new Mission(
                 command.getMissionID(),
-                command.getMissionName()
+                command.getMissionName(),
+                command.getMissionStatus()
         );
         emit().onResponse(new ResponseEvents(mission.getUncommittedChanges()));
     }

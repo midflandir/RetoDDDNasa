@@ -10,6 +10,7 @@ import com.sofka.domain.mission.events.Scheduleadded;
 import com.sofka.domain.mission.values.EndDate;
 import com.sofka.domain.mission.values.MissionID;
 import com.sofka.domain.mission.values.MissionName;
+import com.sofka.domain.mission.values.MissionStatus;
 import com.sofka.domain.mission.values.Operation;
 import com.sofka.domain.mission.values.ScheduleID;
 import com.sofka.domain.mission.values.StartDate;
@@ -37,7 +38,7 @@ class UpdateScheduleStartDateUseCaseTest {
                 new StartDate("3045-09-09 05:07"));
         var useCase = new UpdateScheduleStartDateUseCase();
         Mockito.when(repository.getEventsBy(ROOT_ID)).thenReturn(List.of(
-                new MissionCreated(new MissionName("Curiosity")),
+                new MissionCreated(new MissionName("Curiosity"), new MissionStatus("Pending")),
                 new Scheduleadded(new ScheduleID("123"),
                         new Operation("Qsat deployment"),
                         new StartDate("2022-08-08 12:33"),

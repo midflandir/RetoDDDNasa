@@ -9,6 +9,7 @@ import com.sofka.domain.mission.events.Scheduleadded;
 import com.sofka.domain.mission.values.EndDate;
 import com.sofka.domain.mission.values.MissionID;
 import com.sofka.domain.mission.values.MissionName;
+import com.sofka.domain.mission.values.MissionStatus;
 import com.sofka.domain.mission.values.Operation;
 import com.sofka.domain.mission.values.ScheduleID;
 import com.sofka.domain.mission.values.StartDate;
@@ -34,7 +35,7 @@ class AddScheduleUseCaseTest {
     void AddScheduleUseCaseTest(){
 
 
-        MissionCreated event = new MissionCreated(new MissionName("Curiosity"));
+        MissionCreated event = new MissionCreated(new MissionName("Curiosity"), new MissionStatus("Pending"));
         event.setAggregateRootId(ROOT_ID);
 
         AddSchedule command = new AddSchedule(new MissionID(event.aggregateRootId()),

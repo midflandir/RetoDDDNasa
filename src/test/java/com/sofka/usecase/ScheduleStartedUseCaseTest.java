@@ -6,6 +6,7 @@ import co.com.sofka.business.support.TriggeredEvent;
 import com.sofka.domain.mission.events.MissionCreated;
 import com.sofka.domain.mission.events.Scheduleadded;
 import com.sofka.domain.mission.values.MissionName;
+import com.sofka.domain.mission.values.MissionStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -27,7 +28,7 @@ class ScheduleStartedUseCaseTest {
     @Test
     void assignIncomeAccountTest(){
         // Arrange
-        MissionCreated event = new MissionCreated(new MissionName("Curiosity"));
+        MissionCreated event = new MissionCreated(new MissionName("Curiosity"), new MissionStatus("Pending"));
         event.setAggregateRootId(ROOT_ID);
         var useCase = new ScheduleStartedUseCase();
         Mockito.when(repository.getEventsBy(ROOT_ID)).thenReturn(List.of(event));

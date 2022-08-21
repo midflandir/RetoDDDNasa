@@ -9,6 +9,7 @@ import com.sofka.domain.mission.events.ExplorationSystemCategoryChanged;
 import com.sofka.domain.mission.events.ExplorationSystemModelUpdated;
 import com.sofka.domain.mission.events.ExplorationSystemVersionChanged;
 import com.sofka.domain.mission.events.MissionCreated;
+import com.sofka.domain.mission.events.MissionStatusUpdated;
 import com.sofka.domain.mission.events.MissionnameUpdated;
 import com.sofka.domain.mission.events.ScheduleEndDateUpdated;
 import com.sofka.domain.mission.events.ScheduleOpertaionUpdated;
@@ -22,6 +23,7 @@ public class MissionChange  extends EventChange {
     public MissionChange(Mission mission){
         apply((MissionCreated event) ->{
             mission.missionName = event.getName();
+            mission.missionStatus = event.getMissionStatus();
             mission.engineers = new HashSet<>();
             mission.explorationSystems = new HashSet<>();
             mission.schedules = new HashSet<>();
@@ -29,6 +31,10 @@ public class MissionChange  extends EventChange {
 
         apply((MissionnameUpdated event)->{
             mission.missionName = event.getMissionName();
+        });
+
+        apply((MissionStatusUpdated event)->{
+            mission.missionStatus = event.getMissionStatus();
         });
 
         apply((Engineeradded event)->{

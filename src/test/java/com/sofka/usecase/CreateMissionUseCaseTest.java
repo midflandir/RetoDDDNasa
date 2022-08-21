@@ -5,6 +5,7 @@ import co.com.sofka.business.support.RequestCommand;
 import com.sofka.domain.mission.commands.CreateMission;
 import com.sofka.domain.mission.events.MissionCreated;
 import com.sofka.domain.mission.values.MissionName;
+import com.sofka.domain.mission.values.MissionStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,7 +16,7 @@ class CreateMissionUseCaseTest {
     @Test
     void CreateMisionUseCaseTest() {
 
-        CreateMission command = new CreateMission(new MissionName("Curiosity"));
+        CreateMission command = new CreateMission(new MissionName("Curiosity"), new MissionStatus("Pending"));
         CreateMissionUseCase  useCase = new CreateMissionUseCase();
 
         var events = UseCaseHandler

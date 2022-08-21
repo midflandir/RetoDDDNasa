@@ -12,6 +12,7 @@ import com.sofka.domain.mission.values.Category;
 import com.sofka.domain.mission.values.ExplorationSystemID;
 import com.sofka.domain.mission.values.MissionID;
 import com.sofka.domain.mission.values.MissionName;
+import com.sofka.domain.mission.values.MissionStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -34,7 +35,7 @@ class AddsystemUseCaseTest {
     void AddsystemUseCaseTest(){
 
 
-        MissionCreated event = new MissionCreated(new MissionName("Curiosity"));
+        MissionCreated event = new MissionCreated(new MissionName("Curiosity"), new MissionStatus("Pending"));
         event.setAggregateRootId(ROOT_ID);
 
         AddSystem command = new AddSystem(new MissionID(event.aggregateRootId()),

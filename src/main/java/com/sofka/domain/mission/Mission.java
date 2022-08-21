@@ -12,6 +12,7 @@ import com.sofka.domain.mission.events.ExplorationSystemCategoryChanged;
 import com.sofka.domain.mission.events.ExplorationSystemModelUpdated;
 import com.sofka.domain.mission.events.ExplorationSystemVersionChanged;
 import com.sofka.domain.mission.events.MissionCreated;
+import com.sofka.domain.mission.events.MissionStatusUpdated;
 import com.sofka.domain.mission.events.MissionnameUpdated;
 import com.sofka.domain.mission.events.ScheduleEndDateUpdated;
 import com.sofka.domain.mission.events.ScheduleOpertaionUpdated;
@@ -26,6 +27,7 @@ import com.sofka.domain.mission.values.EngineerName;
 import com.sofka.domain.mission.values.ExplorationSystemID;
 import com.sofka.domain.mission.values.MissionID;
 import com.sofka.domain.mission.values.MissionName;
+import com.sofka.domain.mission.values.MissionStatus;
 import com.sofka.domain.mission.values.Operation;
 import com.sofka.domain.mission.values.ScheduleID;
 import com.sofka.domain.mission.values.StartDate;
@@ -39,13 +41,15 @@ import java.util.Set;
 public class Mission extends AggregateEvent<MissionID>{
 
     protected MissionName missionName;
+
+    protected MissionStatus missionStatus;
     protected Set<Engineer> engineers;
     protected Set<Schedule> schedules;
     protected Set<ExplorationSystem> explorationSystems;
 
-    public Mission(MissionID entityId, MissionName missionName) {
+    public Mission(MissionID entityId, MissionName missionName, MissionStatus missionStatus) {
         super(entityId);
-        appendChange(new MissionCreated(missionName)).apply();
+        appendChange(new MissionCreated(missionName, missionStatus)).apply();
         subscribe(new MissionChange(this));
     }
     public Mission(MissionID entityId) {
@@ -63,6 +67,10 @@ public class Mission extends AggregateEvent<MissionID>{
         appendChange(new MissionnameUpdated(missionName)).apply();
     }
 
+    public void Updatemissionstatus(MissionStatus missionStatus){
+        Objects.requireNonNull(missionStatus);
+        appendChange(new MissionStatusUpdated(missionStatus)).apply();
+    }
 
     public void AddEngineer(EngineerID entityId, EngineerName engineerName, Charge charge, Salary salary){
         Objects.requireNonNull(entityId);
@@ -168,6 +176,9 @@ public class Mission extends AggregateEvent<MissionID>{
         return missionName;
     }
 
+    public MissionStatus MissionStatus() {
+        return missionStatus;
+    }
     public Set<Engineer> engineers() {
         return engineers;
     }
