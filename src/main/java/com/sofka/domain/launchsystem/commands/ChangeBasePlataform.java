@@ -4,9 +4,6 @@ import co.com.sofka.domain.generic.Command;
 import com.sofka.domain.launchsystem.values.BaseID;
 import com.sofka.domain.launchsystem.values.LaunchSystemID;
 import com.sofka.domain.launchsystem.values.Plataform;
-import com.sofka.domain.mission.values.Charge;
-import com.sofka.domain.mission.values.EngineerID;
-import com.sofka.domain.mission.values.MissionID;
 
 public class ChangeBasePlataform extends Command {
     private final LaunchSystemID launchSystemID;

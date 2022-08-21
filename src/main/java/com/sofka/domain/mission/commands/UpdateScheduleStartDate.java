@@ -1,7 +1,6 @@
 package com.sofka.domain.mission.commands;
 
 import co.com.sofka.domain.generic.Command;
-import com.sofka.domain.mission.values.EndDate;
 import com.sofka.domain.mission.values.MissionID;
 import com.sofka.domain.mission.values.ScheduleID;
 import com.sofka.domain.mission.values.StartDate;

@@ -1,7 +1,6 @@
 package com.sofka.domain.launchsystem.values;
 
 import co.com.sofka.domain.generic.ValueObject;
-import com.sofka.domain.mission.values.MissionName;
 
 import java.util.Objects;
 

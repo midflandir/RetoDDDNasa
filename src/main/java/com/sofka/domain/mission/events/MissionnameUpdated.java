@@ -1,8 +1,6 @@
 package com.sofka.domain.mission.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.sofka.domain.generic.values.Version;
-import com.sofka.domain.mission.values.ExplorationSystemID;
 import com.sofka.domain.mission.values.MissionName;
 
 public class MissionnameUpdated extends DomainEvent {

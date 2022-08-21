@@ -3,16 +3,6 @@ package com.sofka.usecase;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
-import com.sofka.domain.launchsystem.commands.AddBase;
-import com.sofka.domain.launchsystem.events.Baseadded;
-import com.sofka.domain.launchsystem.events.LaunchSystemCreated;
-import com.sofka.domain.launchsystem.values.BaseID;
-import com.sofka.domain.launchsystem.values.BaseName;
-import com.sofka.domain.launchsystem.values.LaunchDate;
-import com.sofka.domain.launchsystem.values.LaunchSystemID;
-import com.sofka.domain.launchsystem.values.Location;
-import com.sofka.domain.launchsystem.values.Plataform;
-import com.sofka.domain.launchsystem.values.Propetary;
 import com.sofka.domain.mission.commands.AddEngineer;
 import com.sofka.domain.mission.events.Engineeradded;
 import com.sofka.domain.mission.events.MissionCreated;
@@ -31,7 +21,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)
 class AddEngineerUseCaseTest {
 

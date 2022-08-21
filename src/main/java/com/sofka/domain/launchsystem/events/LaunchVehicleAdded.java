@@ -6,10 +6,6 @@ import com.sofka.domain.generic.values.Version;
 import com.sofka.domain.launchsystem.values.LaunchVehicleID;
 import com.sofka.domain.launchsystem.values.Manufacturer;
 import com.sofka.domain.launchsystem.values.Thrust;
-import com.sofka.domain.mission.values.Charge;
-import com.sofka.domain.mission.values.EngineerID;
-import com.sofka.domain.mission.values.EngineerName;
-import com.sofka.domain.mission.values.Salary;
 
 public class LaunchVehicleAdded extends DomainEvent {
 

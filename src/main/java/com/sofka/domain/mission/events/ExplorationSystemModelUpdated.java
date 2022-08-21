@@ -2,7 +2,6 @@ package com.sofka.domain.mission.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofka.domain.generic.values.Model;
-import com.sofka.domain.mission.values.Category;
 import com.sofka.domain.mission.values.ExplorationSystemID;
 
 public class ExplorationSystemModelUpdated  extends DomainEvent {

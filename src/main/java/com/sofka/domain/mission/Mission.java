@@ -27,9 +27,9 @@ import com.sofka.domain.mission.values.ExplorationSystemID;
 import com.sofka.domain.mission.values.MissionID;
 import com.sofka.domain.mission.values.MissionName;
 import com.sofka.domain.mission.values.Operation;
-import com.sofka.domain.mission.values.Salary;
 import com.sofka.domain.mission.values.ScheduleID;
 import com.sofka.domain.mission.values.StartDate;
+import com.sofka.domain.mission.values.Salary;
 
 import java.util.List;
 import java.util.Objects;

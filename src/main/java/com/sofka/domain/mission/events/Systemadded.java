@@ -3,13 +3,8 @@ package com.sofka.domain.mission.events;
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofka.domain.generic.values.Model;
 import com.sofka.domain.generic.values.Version;
-import com.sofka.domain.launchsystem.values.LaunchSystemID;
 import com.sofka.domain.mission.values.Category;
-import com.sofka.domain.mission.values.Charge;
-import com.sofka.domain.mission.values.EngineerID;
-import com.sofka.domain.mission.values.EngineerName;
 import com.sofka.domain.mission.values.ExplorationSystemID;
-import com.sofka.domain.mission.values.Salary;
 
 public class Systemadded extends DomainEvent {
 

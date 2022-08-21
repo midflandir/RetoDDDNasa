@@ -1,7 +1,6 @@
 package com.sofka.domain.mission.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.sofka.domain.mission.values.Charge;
 import com.sofka.domain.mission.values.EngineerID;
 import com.sofka.domain.mission.values.Salary;
 

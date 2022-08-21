@@ -4,7 +4,6 @@ import co.com.sofka.domain.generic.Command;
 import com.sofka.domain.mission.values.MissionID;
 import com.sofka.domain.mission.values.Operation;
 import com.sofka.domain.mission.values.ScheduleID;
-import com.sofka.domain.mission.values.StartDate;
 
 public class UpdateScheduleOperation extends Command {
     private final MissionID missionID;

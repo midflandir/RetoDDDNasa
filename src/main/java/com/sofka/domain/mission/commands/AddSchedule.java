@@ -1,13 +1,9 @@
 package com.sofka.domain.mission.commands;
 
 import co.com.sofka.domain.generic.Command;
-import com.sofka.domain.mission.values.Charge;
 import com.sofka.domain.mission.values.EndDate;
-import com.sofka.domain.mission.values.EngineerID;
-import com.sofka.domain.mission.values.EngineerName;
 import com.sofka.domain.mission.values.MissionID;
 import com.sofka.domain.mission.values.Operation;
-import com.sofka.domain.mission.values.Salary;
 import com.sofka.domain.mission.values.ScheduleID;
 import com.sofka.domain.mission.values.StartDate;
 
