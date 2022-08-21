@@ -4,14 +4,14 @@ import co.com.sofka.domain.generic.DomainEvent;
 import com.sofka.domain.mission.values.MissionName;
 
 public class MissionCreated extends DomainEvent {
-    private final MissionName MIssionName;
+    private final MissionName MissionName;
 
-    public MissionCreated(MissionName MIssionName) {
+    public MissionCreated(MissionName MissionName) {
         super("com.sofka.domain.mission.event.MissionCreated");
-        this.MIssionName = MIssionName;
+        this.MissionName = MissionName;
     }
 
     public MissionName getName() {
-        return MIssionName;
+        return MissionName;
     }
 }

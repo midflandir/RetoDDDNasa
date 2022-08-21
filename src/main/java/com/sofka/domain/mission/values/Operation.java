@@ -1,4 +1,36 @@
 package com.sofka.domain.mission.values;
 
-public class Operation {
+import co.com.sofka.domain.generic.ValueObject;
+
+import java.util.Objects;
+
+public class Operation implements ValueObject<String> {
+
+    private final String value;
+
+    public Operation(String value) {
+        this.value = value;
+        if (this.value.isBlank()) {
+            throw new IllegalArgumentException("The Vo can't be empty");
+        }
+    }
+
+    @Override
+    public String value() {
+        return value;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Operation operation = (Operation) o;
+        return Objects.equals(value, operation.value);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
+    }
+
 }

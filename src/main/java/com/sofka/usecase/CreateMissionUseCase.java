@@ -14,7 +14,6 @@ public class CreateMissionUseCase extends UseCase<RequestCommand<CreateMission>,
                 command.getMissionID(),
                 command.getMissionName()
         );
-
         emit().onResponse(new ResponseEvents(game.getUncommittedChanges()));
     }
 }

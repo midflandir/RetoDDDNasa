@@ -1,4 +1,13 @@
 package com.sofka.domain.mission.values;
 
-public class EngineerID {
+import co.com.sofka.domain.generic.Identity;
+
+public class EngineerID extends Identity {
+    private EngineerID(String id){
+        super(id);
+    }
+
+    public static EngineerID of(String id) {
+        return new EngineerID(id);
+    }
 }
