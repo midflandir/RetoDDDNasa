@@ -8,8 +8,8 @@ public class CreateLaunchSystem extends Command {
     private final LaunchSystemID launchSystemID;
     private final LaunchDate launchDate;
 
-    public CreateLaunchSystem(LaunchSystemID launchSystemID, LaunchDate launchDate) {
-        this.launchSystemID = launchSystemID;
+    public CreateLaunchSystem(LaunchDate launchDate) {
+        this.launchSystemID = new LaunchSystemID();
         this.launchDate = launchDate;
     }
 

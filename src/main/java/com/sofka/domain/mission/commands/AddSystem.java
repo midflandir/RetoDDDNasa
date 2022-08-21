@@ -36,7 +36,7 @@ public class AddSystem extends Command {
         return model;
     }
 
-    public Category getType() {
+    public Category getCategory() {
         return category;
     }
 

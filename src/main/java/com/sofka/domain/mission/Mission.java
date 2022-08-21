@@ -82,12 +82,12 @@ public class Mission extends AggregateEvent<MissionID>{
     }
 
 
-    public void AddSystem(ExplorationSystemID entityId, Model name, Category refereeType, Version clothes){
+    public void AddSystem(ExplorationSystemID entityId, Model model, Category category, Version version){
         Objects.requireNonNull(entityId);
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(refereeType);
-        Objects.requireNonNull(clothes);
-        appendChange(new Systemadded(entityId, name, refereeType, clothes)).apply();
+        Objects.requireNonNull(model);
+        Objects.requireNonNull(category);
+        Objects.requireNonNull(version);
+        appendChange(new Systemadded(entityId, model, category, version)).apply();
     }
 
 
@@ -112,10 +112,10 @@ public class Mission extends AggregateEvent<MissionID>{
     }
 
 
-    public void UpdateScheduleOperation(ScheduleID entityId, Operation operationo){
+    public void UpdateScheduleOperation(ScheduleID entityId, Operation operation){
         Objects.requireNonNull(entityId);
-        Objects.requireNonNull(operationo);
-        appendChange(new ScheduleOpertaionUpdated(entityId, operationo)).apply();
+        Objects.requireNonNull(operation);
+        appendChange(new ScheduleOpertaionUpdated(entityId, operation)).apply();
     }
 
 

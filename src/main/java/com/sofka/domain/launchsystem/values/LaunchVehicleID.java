@@ -6,7 +6,9 @@ public class LaunchVehicleID extends Identity {
     private LaunchVehicleID(String id){
         super(id);
     }
+    public LaunchVehicleID(){
 
+    }
     public static LaunchVehicleID of(String id) {
         return new LaunchVehicleID(id);
     }

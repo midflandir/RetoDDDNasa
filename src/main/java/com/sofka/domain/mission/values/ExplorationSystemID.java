@@ -6,7 +6,9 @@ public class ExplorationSystemID extends Identity {
     private ExplorationSystemID(String id){
         super(id);
     }
+    public ExplorationSystemID(){
 
+    }
     public static ExplorationSystemID of(String id) {
         return new ExplorationSystemID(id);
     }

@@ -8,8 +8,8 @@ public class CreateMission extends Command {
     private final MissionID missionID;
     private final MissionName missionName;
 
-    public CreateMission(MissionID missionID, MissionName missionName) {
-        this.missionID = missionID;
+    public CreateMission(MissionName missionName) {
+        this.missionID = new MissionID();
         this.missionName = missionName;
     }
 

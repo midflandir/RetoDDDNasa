@@ -9,11 +9,11 @@ import com.sofka.domain.mission.commands.CreateMission;
 public class CreateMissionUseCase extends UseCase<RequestCommand<CreateMission>, ResponseEvents> {
     @Override
     public void executeUseCase(RequestCommand<CreateMission> createMissionRequestCommand) {
-        var command = createMissionRequestCommand.getCommand();
-        var game = new Mission(
+        CreateMission command = createMissionRequestCommand.getCommand();
+        Mission mission = new Mission(
                 command.getMissionID(),
                 command.getMissionName()
         );
-        emit().onResponse(new ResponseEvents(game.getUncommittedChanges()));
+        emit().onResponse(new ResponseEvents(mission.getUncommittedChanges()));
     }
 }

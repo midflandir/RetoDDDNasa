@@ -6,7 +6,8 @@ public class ScheduleID extends Identity {
     private ScheduleID(String id){
         super(id);
     }
-
+    public ScheduleID(){
+    }
     public static ScheduleID of(String id) {
         return new ScheduleID(id);
     }

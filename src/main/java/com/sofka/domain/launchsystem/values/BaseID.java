@@ -7,7 +7,8 @@ public class BaseID extends Identity {
     private BaseID(String id){
         super(id);
     }
-
+    public BaseID(){
+    }
     public static BaseID of(String id) {
         return new BaseID(id);
     }
