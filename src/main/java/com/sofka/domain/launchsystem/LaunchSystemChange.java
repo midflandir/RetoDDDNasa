@@ -29,7 +29,6 @@ public class LaunchSystemChange extends EventChange {
 
         });
 
-
         apply((Baseadded event)->{
 
             launchSystem.bases.add(new Base(
@@ -65,7 +64,6 @@ public class LaunchSystemChange extends EventChange {
             launchSystem.launchDate =event.getLaunchDate();
         });
 
-
         apply((LaunchVehicleModelUpdated event)->{
             var launchvehicle = launchSystem.getLaunchVehicleById(event.getEntityId()).orElseThrow(()->new IllegalArgumentException("Invalid id to reach the entity"));
             launchvehicle.UpdateModel(event.getModel());
@@ -86,30 +84,25 @@ public class LaunchSystemChange extends EventChange {
             launchvehicle.ChangeThrust(event.getThrust());
         });
 
-
         apply((BaseNameUpdated event)->{
             var base = launchSystem.getBaseById(event.getEntityId()).orElseThrow(()->new IllegalArgumentException("Invalid id to reach the entity"));
             base.UpdateName(event.getBaseName());
         });
-
 
         apply((BasePlataformChanged event)->{
             var base = launchSystem.getBaseById(event.getEntityId()).orElseThrow(()->new IllegalArgumentException("Invalid id to reach the entity"));
             base.ChangePlataform(event.getPlataform());
         });
 
-
         apply((BasePropetaryUpdated event)->{
             var base = launchSystem.getBaseById(event.getEntityId()).orElseThrow(()->new IllegalArgumentException("Invalid id to reach the entity"));
             base.UpdatePropetary(event.getPropetary());
         });
 
-
         apply((BaseLocationUpdated event)->{
             var base = launchSystem.getBaseById(event.getEntityId()).orElseThrow(()->new IllegalArgumentException("Invalid id to reach the entity"));
             base.UpdateLocation(event.getLocation());
         });
-
 
         apply((OperatorNameUpdated event)->{
             var operator = launchSystem.getOperatorById(event.getEntityId()).orElseThrow(()->new IllegalArgumentException("Invalid id to reach the entity"));
@@ -121,11 +114,6 @@ public class LaunchSystemChange extends EventChange {
             operator.ChangeType(event.getOperatorType());
         });
 
-
     }
-
-
-
-
 
 }

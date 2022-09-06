@@ -4,10 +4,8 @@ import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import com.sofka.domain.mission.commands.UpdateScheduleEndDate;
-import com.sofka.domain.mission.commands.UpdateScheduleStartDate;
 import com.sofka.domain.mission.events.MissionCreated;
 import com.sofka.domain.mission.events.ScheduleEndDateUpdated;
-import com.sofka.domain.mission.events.ScheduleStartDateUpdated;
 import com.sofka.domain.mission.events.Scheduleadded;
 import com.sofka.domain.mission.values.EndDate;
 import com.sofka.domain.mission.values.MissionID;
@@ -24,8 +22,6 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)
 class UpdateScheduleEndDateUseCaseTest  {
 

@@ -117,11 +117,5 @@ public class MissionChange  extends EventChange {
                     new IllegalArgumentException("Wrong id to reach the Entity"));
             explorationSystem.ChangeVersion(event.getVersion());
         });
-
     }
-
-
-
-
-
 }

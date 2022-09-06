@@ -22,8 +22,7 @@ public class Schedule extends Entity<ScheduleID> {
     }
 
 
-    public void UpdateOperation( Operation operation){
-        this.operation = Objects.requireNonNull(operation);
+    public void UpdateOperation(Operation operation){this.operation = Objects.requireNonNull(operation);
     }
 
     public void UpdateStartDate(StartDate startDate){
